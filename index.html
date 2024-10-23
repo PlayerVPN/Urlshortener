@@ -1,43 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .card {
-            padding: 20px;
-        }
-        .alert {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h1 class="text-center">URL Shortener</h1>
-            {% with messages = get_flashed_messages(with_categories=true) %}
-              {% if messages %}
-                {% for category, message in messages %}
-                  <div class="alert alert-{{ category }}">{{ message }}</div>
-                {% endfor %}
-              {% endif %}
-            {% endwith %}
-            <form method="POST">
-                <div class="form-group">
-                    <input type="text" name="url" class="form-control" placeholder="Enter your URL here" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Shorten</button>
-            </form>
-        </div>
-    </div>
+    <h1>URL Shortener</h1>
+    <form action="/shorten" method="POST">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Shorten</button>
+    </form>
 </body>
 </html>
