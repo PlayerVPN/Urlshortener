@@ -1,1 +1,1 @@
-This website shortens urls but may not completly work yet on some devices!😢
+This website shortens urls but may not completely work yet on some devices!😢
